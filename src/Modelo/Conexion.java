@@ -5,10 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 public class Conexion {
 
-    private final String base = "orcl";
-    private final String user = "sql10373447";
-    private final String password = "2NW81VYfzW";
-    private final String url = "jdbc:mysql://sql10.freemysqlhosting.net:3306/sql10373447";
+    private final String user = "sql10376396";
+    private final String password = "bMXXWE3ySg";
+    private final String url = "jdbc:mysql://sql10.freemysqlhosting.net:3306/sql10376396";
     private Connection con = null;
 
     public Connection getConexion() {
