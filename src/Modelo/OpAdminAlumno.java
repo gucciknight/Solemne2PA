@@ -15,7 +15,7 @@ public class OpAdminAlumno extends Conexion{
     public boolean guardar (Alumno alu){
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "INSERT INTO `alumno`(`id`, `id_nivel`, `nombre`, `apellidos`) VALUES ('"+ alu.getIdAlumno()+"','"+ alu.getIdnivelAlumno() +"','"+ alu.getNombreAlumno()+"',"+ alu.getApellidosAlumno() +"')";      
+        String sql = "INSERT INTO `alumno`(`id`, `nivel_id`, `nombre`, `apellidos`) VALUES ('"+ alu.getIdAlumno()+"','"+ alu.getIdnivelAlumno() +"','"+ alu.getNombreAlumno()+"','"+ alu.getApellidosAlumno() +"')";      
         try{
             ps = con.prepareStatement(sql);
             rs = ps.executeUpdate(sql);
