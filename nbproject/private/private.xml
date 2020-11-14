@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/AlumnoConectados.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/AdministradorAlumno.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/AlumnoProfesores.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/Profesor.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/AdministradorAsignatura.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/AlumnoNota.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Modelo/Operaciones.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Solemne2/Solemne2.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/ProfesorNota.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Modelo/Conexion.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/Alumno.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/Login.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Controlador/Controlador.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/Administrador.java</file>
-            <file>file:/C:/Users/Cristian/Documents/GitHub/Solemne2PA/src/Vista/AdministradorProfesor.java</file>
+            <file>file:/C:/Users/Sini/Desktop/Solemne2PA/src/Vista/AdministradorAlumno.java</file>
+            <file>file:/C:/Users/Sini/Desktop/Solemne2PA/src/Modelo/OpAdminAlumno.java</file>
+            <file>file:/C:/Users/Sini/Desktop/Solemne2PA/src/Controlador/Controlador.java</file>
+            <file>file:/C:/Users/Sini/Desktop/Solemne2PA/src/Solemne2/Solemne2.java</file>
+            <file>file:/C:/Users/Sini/Desktop/Solemne2PA/src/Modelo/Alumno.java</file>
+            <file>file:/C:/Users/Sini/Desktop/Solemne2PA/src/Modelo/Conexion.java</file>
         </group>
     </open-files>
 </project-private>
