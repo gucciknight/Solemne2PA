@@ -32,7 +32,8 @@ public class ControladorProfesor implements ActionListener{
             mod.setIdProfesor(Integer.parseInt(modList.txtRutAdminProfesor.getText()));
             mod.setNombreProfesor(modList.txtNombreAdminProfesor.getText());
             mod.setApellidoProfesor(modList.txtApellidoAdminProfesor.getText());
-            mod.setEmailProfesor(modList.txtApellidoAdminProfesor.getText());
+            mod.setEmailProfesor(modList.txtEmailAdminProfesor.getText());
+            mod.setClaveProfesor(modList.passContrasenaAdminProfesor.getText());
             mod.setEspecialistaProfesor(modList.txtAsignaturaAdminProfesor.getText());
             
             if (modOp.guardar(mod)) {
@@ -61,6 +62,7 @@ public class ControladorProfesor implements ActionListener{
         modList.txtApellidoAdminProfesor.setText(null);
         modList.txtRutAdminProfesor.setText(null);
         modList.txtEmailAdminProfesor.setText(null);
+        modList.passContrasenaAdminProfesor.setText(null);
         modList.txtAsignaturaAdminProfesor.setText(null);
     } 
 }
