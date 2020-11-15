@@ -33,14 +33,14 @@ public class AdministradorProfesor extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtNombreAdminProfe = new javax.swing.JTextField();
-        txtApellidoAdminProfe = new javax.swing.JTextField();
-        txtRutAdminProfe = new javax.swing.JTextField();
-        txtAsignaturaAdminProfe = new javax.swing.JTextField();
-        btnGuardarAdminProfe = new javax.swing.JButton();
-        btnModificarAdminProfe = new javax.swing.JButton();
-        btnEliminarAdminProfe = new javax.swing.JButton();
-        btnVolverAdminProfe = new javax.swing.JButton();
+        txtNombreAdminProfesor = new javax.swing.JTextField();
+        txtApellidoAdminProfesor = new javax.swing.JTextField();
+        txtRutAdminProfesor = new javax.swing.JTextField();
+        txtAsignaturaAdminProfesor = new javax.swing.JTextField();
+        btnGuardarAdminProfesor = new javax.swing.JButton();
+        btnModificarAdminProfesor = new javax.swing.JButton();
+        btnEliminarAdminProfesor = new javax.swing.JButton();
+        btnVolverAdminProfesor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,13 +55,13 @@ public class AdministradorProfesor extends javax.swing.JFrame {
 
         jLabel5.setText("Rut:");
 
-        btnGuardarAdminProfe.setText("Guardar");
+        btnGuardarAdminProfesor.setText("Guardar");
 
-        btnModificarAdminProfe.setText("Modificar");
+        btnModificarAdminProfesor.setText("Modificar");
 
-        btnEliminarAdminProfe.setText("Eliminar");
+        btnEliminarAdminProfesor.setText("Eliminar");
 
-        btnVolverAdminProfe.setText("Volver");
+        btnVolverAdminProfesor.setText("Volver");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -78,23 +78,23 @@ public class AdministradorProfesor extends javax.swing.JFrame {
                             .addComponent(jLabel5)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
-                        .addComponent(btnGuardarAdminProfe)))
+                        .addComponent(btnGuardarAdminProfesor)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1)
-                            .addComponent(txtNombreAdminProfe)
-                            .addComponent(txtApellidoAdminProfe)
-                            .addComponent(txtRutAdminProfe)
-                            .addComponent(txtAsignaturaAdminProfe, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)))
+                            .addComponent(txtNombreAdminProfesor)
+                            .addComponent(txtApellidoAdminProfesor)
+                            .addComponent(txtRutAdminProfesor)
+                            .addComponent(txtAsignaturaAdminProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(btnModificarAdminProfe)
+                        .addComponent(btnModificarAdminProfesor)
                         .addGap(18, 18, 18)
-                        .addComponent(btnEliminarAdminProfe)
+                        .addComponent(btnEliminarAdminProfesor)
                         .addGap(18, 18, 18)
-                        .addComponent(btnVolverAdminProfe)))
+                        .addComponent(btnVolverAdminProfesor)))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -105,25 +105,25 @@ public class AdministradorProfesor extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtNombreAdminProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombreAdminProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtApellidoAdminProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtApellidoAdminProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtRutAdminProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRutAdminProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtAsignaturaAdminProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAsignaturaAdminProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGuardarAdminProfe)
-                    .addComponent(btnModificarAdminProfe)
-                    .addComponent(btnEliminarAdminProfe)
-                    .addComponent(btnVolverAdminProfe))
+                    .addComponent(btnGuardarAdminProfesor)
+                    .addComponent(btnModificarAdminProfesor)
+                    .addComponent(btnEliminarAdminProfesor)
+                    .addComponent(btnVolverAdminProfesor))
                 .addGap(40, 40, 40))
         );
 
@@ -177,19 +177,19 @@ public class AdministradorProfesor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEliminarAdminProfe;
-    private javax.swing.JButton btnGuardarAdminProfe;
-    private javax.swing.JButton btnModificarAdminProfe;
-    private javax.swing.JButton btnVolverAdminProfe;
+    public javax.swing.JButton btnEliminarAdminProfesor;
+    public javax.swing.JButton btnGuardarAdminProfesor;
+    public javax.swing.JButton btnModificarAdminProfesor;
+    public javax.swing.JButton btnVolverAdminProfesor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtApellidoAdminProfe;
-    private javax.swing.JTextField txtAsignaturaAdminProfe;
-    private javax.swing.JTextField txtNombreAdminProfe;
-    private javax.swing.JTextField txtRutAdminProfe;
+    public javax.swing.JTextField txtApellidoAdminProfesor;
+    public javax.swing.JTextField txtAsignaturaAdminProfesor;
+    public javax.swing.JTextField txtNombreAdminProfesor;
+    public javax.swing.JTextField txtRutAdminProfesor;
     // End of variables declaration//GEN-END:variables
 }

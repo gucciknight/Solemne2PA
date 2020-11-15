@@ -39,7 +39,7 @@ public class AdministradorAlumno extends javax.swing.JFrame {
         txtAsignaturaAdminAlumno = new javax.swing.JTextField();
         btnGuardarAdminAlumno = new javax.swing.JButton();
         btnModificarAdminAlumno = new javax.swing.JButton();
-        btnElminarAdminAlumno = new javax.swing.JButton();
+        btnEliminarAdminAlumno = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,7 +58,7 @@ public class AdministradorAlumno extends javax.swing.JFrame {
 
         btnModificarAdminAlumno.setText("Modificar");
 
-        btnElminarAdminAlumno.setText("Eliminar");
+        btnEliminarAdminAlumno.setText("Eliminar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -84,7 +84,7 @@ public class AdministradorAlumno extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnModificarAdminAlumno)
                                 .addGap(32, 32, 32)
-                                .addComponent(btnElminarAdminAlumno))))
+                                .addComponent(btnEliminarAdminAlumno))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(160, 160, 160)
                         .addComponent(jLabel1)))
@@ -115,7 +115,7 @@ public class AdministradorAlumno extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarAdminAlumno)
                     .addComponent(btnModificarAdminAlumno)
-                    .addComponent(btnElminarAdminAlumno))
+                    .addComponent(btnEliminarAdminAlumno))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
@@ -170,9 +170,9 @@ public class AdministradorAlumno extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnElminarAdminAlumno;
+    public javax.swing.JButton btnEliminarAdminAlumno;
     public javax.swing.JButton btnGuardarAdminAlumno;
-    private javax.swing.JButton btnModificarAdminAlumno;
+    public javax.swing.JButton btnModificarAdminAlumno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -180,7 +180,7 @@ public class AdministradorAlumno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField txtApellidoAdminAlumno;
-    private javax.swing.JTextField txtAsignaturaAdminAlumno;
+    public javax.swing.JTextField txtAsignaturaAdminAlumno;
     public javax.swing.JTextField txtNombreAdminAlumno;
     public javax.swing.JTextField txtRutAdminAlumno;
     // End of variables declaration//GEN-END:variables

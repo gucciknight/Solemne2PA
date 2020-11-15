@@ -5,17 +5,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class OpAdminAlumno extends Conexion{
+public class OpAdminProfesor extends Conexion{
     private int rs;
         
-    public boolean guardar (Alumno alu){
+    public boolean guardar (Profesor prof){
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "INSERT INTO `alumno`(`id`, `nivel_id`, `nombre`, `apellidos`) VALUES ('"+ alu.getIdAlumno()+"','"+ alu.getIdNivelAlumno() +"','"+ alu.getNombreAlumno()+"','"+ alu.getApellidoAlumno() +"')";      
+        String sql = "INSERT INTO `profesor`(`id`, `nombre`, `apellidos`, `email`, `especialista` ) VALUES ('"+ prof.getIdProfesor()+"','" +"','"+ prof.getNombreProfesor()+"','"+ prof.getApellidoProfesor() +"','" + prof.getEmailProfesor() + "','" + prof.getEspecialistaProfesor()+ "')";      
         try{
             ps = con.prepareStatement(sql);
             rs = ps.executeUpdate(sql);
-            System.out.println(alu.idAlumno);
+            System.out.println(prof.idProfesor);
             System.out.println("Data from online Database :");
             return true;
             
@@ -32,16 +32,17 @@ public class OpAdminAlumno extends Conexion{
         }
     }
     
-    public boolean modificar(Alumno alu) {
+    public boolean modificar(Profesor prof) {
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "UPDATE producto SET idAlumno=?, idNivelAlumno=?, nombreAlumno=?, apellidoAlumno=? WHERE codigo = ?)";
+        String sql = "UPDATE producto SET idProfesor=?, nombreProfesor=?, apellidoProfesor=?, emailProfesor=?, especialistaProfesor=? WHERE codigo = ?)";
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, alu.getIdAlumno());
-            ps.setInt(2, alu.getIdNivelAlumno());
-            ps.setString(3, alu.getNombreAlumno());
-            ps.setString(4, alu.getApellidoAlumno());
+            ps.setInt(1, prof.getIdProfesor());
+            ps.setString(2, prof.getNombreProfesor());
+            ps.setString(3, prof.getApellidoProfesor());
+            ps.setString(4, prof.getEmailProfesor());
+            ps.setString(5, prof.getEspecialistaProfesor());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -56,13 +57,13 @@ public class OpAdminAlumno extends Conexion{
         }
     }
     
-    public boolean eliminar(Alumno alu) {
+    public boolean eliminar(Profesor prof) {
         PreparedStatement ps = null;
         Connection con = getConexion();
         String sql = "DELETE FROM producto WHERE nroSerie = ?)";
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, alu.getIdAlumno());
+            ps.setInt(1, prof.getIdProfesor());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -77,16 +78,3 @@ public class OpAdminAlumno extends Conexion{
         }
     }
 }
-    
-    /*
-    public boolean modificar(Equipos eq) {
-
-    }
-    
-    public boolean eliminar(Equipos eq) {
-
-    }
-    
-    public boolean buscar(Equipos eq) {
-
-    }*/

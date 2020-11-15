@@ -51,7 +51,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="btnGuardarAdminProfe" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnGuardarAdminProfesor" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -59,19 +59,19 @@
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtNombreAdminProfe" max="32767" attributes="0"/>
-                              <Component id="txtApellidoAdminProfe" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtRutAdminProfe" max="32767" attributes="0"/>
-                              <Component id="txtAsignaturaAdminProfe" pref="120" max="32767" attributes="0"/>
+                              <Component id="txtNombreAdminProfesor" max="32767" attributes="0"/>
+                              <Component id="txtApellidoAdminProfesor" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtRutAdminProfesor" max="32767" attributes="0"/>
+                              <Component id="txtAsignaturaAdminProfesor" pref="120" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                          <Component id="btnModificarAdminProfe" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnModificarAdminProfesor" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btnEliminarAdminProfe" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEliminarAdminProfesor" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btnVolverAdminProfe" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnVolverAdminProfesor" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="46" max="32767" attributes="0"/>
@@ -86,29 +86,29 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtNombreAdminProfe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNombreAdminProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtApellidoAdminProfe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtApellidoAdminProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtRutAdminProfe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtRutAdminProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtAsignaturaAdminProfe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAsignaturaAdminProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="45" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnGuardarAdminProfe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnModificarAdminProfe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnEliminarAdminProfe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnVolverAdminProfe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnGuardarAdminProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnModificarAdminProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnEliminarAdminProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnVolverAdminProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
@@ -144,33 +144,57 @@
             <Property name="text" type="java.lang.String" value="Rut:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtNombreAdminProfe">
+        <Component class="javax.swing.JTextField" name="txtNombreAdminProfesor">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtApellidoAdminProfe">
+        <Component class="javax.swing.JTextField" name="txtApellidoAdminProfesor">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtRutAdminProfe">
+        <Component class="javax.swing.JTextField" name="txtRutAdminProfesor">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtAsignaturaAdminProfe">
+        <Component class="javax.swing.JTextField" name="txtAsignaturaAdminProfesor">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="btnGuardarAdminProfe">
+        <Component class="javax.swing.JButton" name="btnGuardarAdminProfesor">
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="btnModificarAdminProfe">
+        <Component class="javax.swing.JButton" name="btnModificarAdminProfesor">
           <Properties>
             <Property name="text" type="java.lang.String" value="Modificar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="btnEliminarAdminProfe">
+        <Component class="javax.swing.JButton" name="btnEliminarAdminProfesor">
           <Properties>
             <Property name="text" type="java.lang.String" value="Eliminar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="btnVolverAdminProfe">
+        <Component class="javax.swing.JButton" name="btnVolverAdminProfesor">
           <Properties>
             <Property name="text" type="java.lang.String" value="Volver"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

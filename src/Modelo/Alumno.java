@@ -2,11 +2,11 @@ package Modelo;
 
 public class Alumno {
     int idAlumno;
-    int idnivelAlumno;
+    int idNivelAlumno;
     String loginAlumno;
     String claveAlumno;
     String nombreAlumno;
-    String apellidosAlumno;
+    String apellidoAlumno;
 
     public int getIdAlumno() {
         return idAlumno;
@@ -16,12 +16,12 @@ public class Alumno {
         this.idAlumno = idAlumno;
     }
 
-    public int getIdnivelAlumno() {
-        return idnivelAlumno;
+    public int getIdNivelAlumno() {
+        return idNivelAlumno;
     }
 
-    public void setIdnivelAlumno(int idnivelAlumno) {
-        this.idnivelAlumno = idnivelAlumno;
+    public void setIdNivelAlumno(int idNivelAlumno) {
+        this.idNivelAlumno = idNivelAlumno;
     }
 
     public String getLoginAlumno() {
@@ -48,12 +48,12 @@ public class Alumno {
         this.nombreAlumno = nombreAlumno;
     }
 
-    public String getApellidosAlumno() {
-        return apellidosAlumno;
+    public String getApellidoAlumno() {
+        return apellidoAlumno;
     }
 
-    public void setApellidosAlumno(String apellidosAlumno) {
-        this.apellidosAlumno = apellidosAlumno;
+    public void setApellidoAlumno(String apellidoAlumno) {
+        this.apellidoAlumno = apellidoAlumno;
     }
     
     

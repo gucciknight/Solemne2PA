@@ -60,7 +60,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="btnModificarAdminAlumno" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="btnElminarAdminAlumno" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEliminarAdminAlumno" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -102,7 +102,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnGuardarAdminAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnModificarAdminAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnElminarAdminAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnEliminarAdminAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="33" max="32767" attributes="0"/>
               </Group>
@@ -154,6 +154,9 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="txtAsignaturaAdminAlumno">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="btnGuardarAdminAlumno">
           <Properties>
@@ -167,11 +170,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Modificar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="btnElminarAdminAlumno">
+        <Component class="javax.swing.JButton" name="btnEliminarAdminAlumno">
           <Properties>
             <Property name="text" type="java.lang.String" value="Eliminar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

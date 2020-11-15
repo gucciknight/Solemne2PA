@@ -1,14 +1,68 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo;
 
-/**
- *
- * @author Cristian
- */
 public class Profesor {
+    int idProfesor;
+    String loginProfesor;
+    String claveProfesor;
+    String nombreProfesor;
+    String apellidoProfesor;
+    String emailProfesor;
+    String especialistaProfesor;
+
+    public int getIdProfesor() {
+        return idProfesor;
+    }
+
+    public void setIdProfesor(int idProfesor) {
+        this.idProfesor = idProfesor;
+    }
+
+    public String getLoginProfesor() {
+        return loginProfesor;
+    }
+
+    public void setLoginProfesor(String loginProfesor) {
+        this.loginProfesor = loginProfesor;
+    }
+
+    public String getClaveProfesor() {
+        return claveProfesor;
+    }
+
+    public void setClaveProfesor(String claveProfesor) {
+        this.claveProfesor = claveProfesor;
+    }
+
+    public String getNombreProfesor() {
+        return nombreProfesor;
+    }
+
+    public void setNombreProfesor(String nombreProfesor) {
+        this.nombreProfesor = nombreProfesor;
+    }
+
+    public String getApellidoProfesor() {
+        return apellidoProfesor;
+    }
+
+    public void setApellidoProfesor(String apellidoProfesor) {
+        this.apellidoProfesor = apellidoProfesor;
+    }
+
+    public String getEmailProfesor() {
+        return emailProfesor;
+    }
+
+    public void setEmailProfesor(String emailProfesor) {
+        this.emailProfesor = emailProfesor;
+    }
+
+    public String getEspecialistaProfesor() {
+        return especialistaProfesor;
+    }
+
+    public void setEspecialistaProfesor(String especialistaProfesor) {
+        this.especialistaProfesor = especialistaProfesor;
+    }
     
 }
