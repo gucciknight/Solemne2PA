@@ -10,3 +10,10 @@ project-root-directory/
 + test/
 + build.xml
 + /build/
+build/classes/Controlador/ControladorAlumno.class
+build/classes/Controlador/ControladorProfesor.class
+build/classes/Modelo/Administrador.class
+build/classes/Modelo/Asignatura.class
+build/classes/Modelo/Nivel.class
+build/classes/Modelo/OpAdminProfesor.class
+build/classes/Modelo/Profesor.class
