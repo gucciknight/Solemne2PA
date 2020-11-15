@@ -42,7 +42,7 @@ public class OpAdminProfesor extends Conexion{
             ps.setString(2, prof.getNombreProfesor());
             ps.setString(3, prof.getApellidoProfesor());
             ps.setString(4, prof.getEmailProfesor());
-            ps.setString(5, prof.getEspecialistaProfesor());
+            ps.setInt(5, prof.getEspecialistaProfesor());
             ps.execute();
             return true;
         } catch (SQLException e) {

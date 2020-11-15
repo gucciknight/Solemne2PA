@@ -1,17 +1,10 @@
 package Modelo;
 
 public class Asignatura {
-    int idAlumno;
     int idAsignatura;
-    int idNota;
-
-    public int getIdAlumno() {
-        return idAlumno;
-    }
-
-    public void setIdAlumno(int idAlumno) {
-        this.idAlumno = idAlumno;
-    }
+    int idNivelAsignatura;
+    int idProfesor;
+    String nombreAsignatura;
 
     public int getIdAsignatura() {
         return idAsignatura;
@@ -21,11 +14,27 @@ public class Asignatura {
         this.idAsignatura = idAsignatura;
     }
 
-    public int getIdNota() {
-        return idNota;
+    public int getIdNivelAsignatura() {
+        return idNivelAsignatura;
     }
 
-    public void setIdNota(int idNota) {
-        this.idNota = idNota;
+    public void setIdNivelAsignatura(int idNivelAsignatura) {
+        this.idNivelAsignatura = idNivelAsignatura;
     }
+
+    public int getIdProfesor() {
+        return idProfesor;
+    }
+
+    public void setIdProfesor(int idProfesor) {
+        this.idProfesor = idProfesor;
+    }
+
+    public String getNombreAsignatura() {
+        return nombreAsignatura;
+    }
+
+    public void setNombreAsignatura(String nombreAsignatura) {
+        this.nombreAsignatura = nombreAsignatura;
+    }  
 }

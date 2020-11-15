@@ -54,7 +54,5 @@ public class Alumno {
 
     public void setApellidoAlumno(String apellidoAlumno) {
         this.apellidoAlumno = apellidoAlumno;
-    }
-    
-    
+    } 
 }

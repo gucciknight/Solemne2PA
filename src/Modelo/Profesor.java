@@ -7,7 +7,7 @@ public class Profesor {
     String nombreProfesor;
     String apellidoProfesor;
     String emailProfesor;
-    String especialistaProfesor;
+    int especialistaProfesor;
 
     public int getIdProfesor() {
         return idProfesor;
@@ -57,12 +57,11 @@ public class Profesor {
         this.emailProfesor = emailProfesor;
     }
 
-    public String getEspecialistaProfesor() {
+    public int getEspecialistaProfesor() {
         return especialistaProfesor;
     }
 
-    public void setEspecialistaProfesor(String especialistaProfesor) {
+    public void setEspecialistaProfesor(int especialistaProfesor) {
         this.especialistaProfesor = especialistaProfesor;
     }
-    
 }
