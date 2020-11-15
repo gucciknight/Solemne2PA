@@ -1,14 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo;
 
-/**
- *
- * @author Cristian
- */
 public class Asignatura {
-    
+    int idAlumno;
+    int idAsignatura;
+    int idNota;
+
+    public int getIdAlumno() {
+        return idAlumno;
+    }
+
+    public void setIdAlumno(int idAlumno) {
+        this.idAlumno = idAlumno;
+    }
+
+    public int getIdAsignatura() {
+        return idAsignatura;
+    }
+
+    public void setIdAsignatura(int idAsignatura) {
+        this.idAsignatura = idAsignatura;
+    }
+
+    public int getIdNota() {
+        return idNota;
+    }
+
+    public void setIdNota(int idNota) {
+        this.idNota = idNota;
+    }
 }

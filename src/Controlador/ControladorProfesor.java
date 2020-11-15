@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
-public class ControladorProfesor {
+public class ControladorProfesor implements ActionListener{
     private Profesor mod;
     private OpAdminProfesor modOp;
     private AdministradorProfesor modList;
@@ -16,7 +16,9 @@ public class ControladorProfesor {
         this.mod = mod;
         this.modOp = modOp;
         this.modList = modList;
-        this.modList.btnGuardarAdminProfesor.addActionListener((ActionListener) this);
+        this.modList.btnGuardarAdminProfesor.addActionListener(this);
+        this.modList.btnEliminarAdminProfesor.addActionListener(this);
+        this.modList.btnModificarAdminProfesor.addActionListener(this);
     }
     
     public void iniciar() {

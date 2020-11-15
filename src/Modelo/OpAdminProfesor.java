@@ -35,7 +35,7 @@ public class OpAdminProfesor extends Conexion{
     public boolean modificar(Profesor prof) {
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "UPDATE producto SET idProfesor=?, nombreProfesor=?, apellidoProfesor=?, emailProfesor=?, especialistaProfesor=? WHERE codigo = ?)";
+        String sql = "UPDATE profesor SET idProfesor=?, nombreProfesor=?, apellidoProfesor=?, emailProfesor=?, especialistaProfesor=? WHERE codigo = ?)";
         try {
             ps = con.prepareStatement(sql);
             ps.setInt(1, prof.getIdProfesor());
@@ -60,7 +60,7 @@ public class OpAdminProfesor extends Conexion{
     public boolean eliminar(Profesor prof) {
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "DELETE FROM producto WHERE nroSerie = ?)";
+        String sql = "DELETE FROM profesor WHERE idProfesor = ?)";
         try {
             ps = con.prepareStatement(sql);
             ps.setInt(1, prof.getIdProfesor());

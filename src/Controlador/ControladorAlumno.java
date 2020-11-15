@@ -33,6 +33,8 @@ public class ControladorAlumno implements ActionListener {
             mod.setIdAlumno(Integer.parseInt(modList.txtRutAdminAlumno.getText()));
             mod.setNombreAlumno(modList.txtNombreAdminAlumno.getText());
             mod.setApellidoAlumno(modList.txtApellidoAdminAlumno.getText());
+            mod.setLoginAlumno(modList.txtLoginAdminAlumno.getText());
+            mod.setClaveAlumno(modList.txtClaveAdminAlumno.getText());
             
             if (modOp.guardar(mod)) {
                 JOptionPane.showMessageDialog(null, "Alumno Guardado");
