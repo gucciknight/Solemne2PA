@@ -43,6 +43,21 @@ public class ControladorProfesor implements ActionListener{
             }
         }
         
+        if (e.getSource() == modList.btnModificarAdminProfesor) {
+            mod.setNombreProfesor(modList.txtNombreAdminProfesor.getText());
+            mod.setApellidoProfesor(modList.txtApellidoAdminProfesor.getText());
+            mod.setEmailProfesor(modList.txtEmailAdminProfesor.getText());
+            mod.setEspecialistaProfesor(modList.txtAsignaturaAdminProfesor.getText());
+            
+            if (modOp.modificar(mod)) {
+                JOptionPane.showMessageDialog(null, "Profesor Modificado");
+                limpiar();
+            } else {
+                JOptionPane.showMessageDialog(null, "Error al Modificar");
+                limpiar();
+            }
+        }
+        
         if (e.getSource() == modList.btnEliminarAdminProfesor){
             mod.setIdProfesor(Integer.parseInt(modList.txtRutAdminProfesor.getText()));
             
