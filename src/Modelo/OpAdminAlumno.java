@@ -35,13 +35,13 @@ public class OpAdminAlumno extends Conexion{
     public boolean modificar(Alumno alu) {
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "UPDATE producto SET idAlumno=?, idNivelAlumno=?, nombreAlumno=?, apellidoAlumno=? WHERE codigo = ?)";
+        String sql = "UPDATE alumno SET nombre = ?, apellidos = ? WHERE id = ?";
         try {
             ps = con.prepareStatement(sql);
             ps.setInt(1, alu.getIdAlumno());
-            ps.setInt(2, alu.getIdNivelAlumno());
-            ps.setString(3, alu.getNombreAlumno());
-            ps.setString(4, alu.getApellidoAlumno());
+            /*ps.setInt(2, alu.getIdNivelAlumno());*/
+            ps.setString(2, alu.getNombreAlumno());
+            ps.setString(3, alu.getApellidoAlumno());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -59,7 +59,7 @@ public class OpAdminAlumno extends Conexion{
     public boolean eliminar(Alumno alu) {
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "DELETE FROM producto WHERE nroSerie = ?)";
+        String sql = "DELETE FROM alumno WHERE id = ?";
         try {
             ps = con.prepareStatement(sql);
             ps.setInt(1, alu.getIdAlumno());
@@ -77,16 +77,3 @@ public class OpAdminAlumno extends Conexion{
         }
     }
 }
-    
-    /*
-    public boolean modificar(Equipos eq) {
-
-    }
-    
-    public boolean eliminar(Equipos eq) {
-
-    }
-    
-    public boolean buscar(Equipos eq) {
-
-    }*/

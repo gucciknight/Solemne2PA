@@ -14,10 +14,12 @@ public class ControladorAlumno implements ActionListener {
     private AdministradorAlumno modList;
     
     public ControladorAlumno (Alumno mod, OpAdminAlumno modOp, AdministradorAlumno modList){
-         this.mod = mod;
+        this.mod = mod;
         this.modOp = modOp;
         this.modList = modList;
         this.modList.btnGuardarAdminAlumno.addActionListener(this);
+        this.modList.btnEliminarAdminAlumno.addActionListener(this);
+        this.modList.btnModificarAdminAlumno.addActionListener(this);
     }
     
     public void iniciar() {
@@ -39,11 +41,24 @@ public class ControladorAlumno implements ActionListener {
             }
         }
         
+          if (e.getSource() == modList.btnModificarAdminAlumno) {
+            mod.setNombreAlumno(modList.txtNombreAdminAlumno.getText());
+            mod.setApellidoAlumno(modList.txtApellidoAdminAlumno.getText());
+            
+            if (modOp.modificar(mod)) {
+                JOptionPane.showMessageDialog(null, "Equipo Modificado");
+                limpiar();
+            } else {
+                JOptionPane.showMessageDialog(null, "Error al Modificar");
+                limpiar();
+            }
+        }
+        
         if (e.getSource() == modList.btnEliminarAdminAlumno){
             mod.setIdAlumno(Integer.parseInt(modList.txtRutAdminAlumno.getText()));
             
             if (modOp.eliminar(mod)) {
-                JOptionPane.showMessageDialog(null, "Equipo Eliminado");
+                JOptionPane.showMessageDialog(null, "Alumno Eliminado");
                 limpiar();
             } else {
                 JOptionPane.showMessageDialog(null, "Error al eliminar");
