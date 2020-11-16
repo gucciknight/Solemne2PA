@@ -75,5 +75,9 @@ public class ControladorAlumno implements ActionListener {
         modList.txtApellidoAdminAlumno.setText(null);
         modList.txtRutAdminAlumno.setText(null);
         modList.txtAsignaturaAdminAlumno.setText(null);
+        modList.txtLoginAdminAlumno.setText(null);
+        modList.txtClaveAdminAlumno.setText(null);
+        modList.txtNivelAdminAlumno.setText(null);
+        
     } 
 }

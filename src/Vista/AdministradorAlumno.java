@@ -44,6 +44,8 @@ public class AdministradorAlumno extends javax.swing.JFrame {
         txtLoginAdminAlumno = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         txtClaveAdminAlumno = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        txtNivelAdminAlumno = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,7 +54,7 @@ public class AdministradorAlumno extends javax.swing.JFrame {
 
         jLabel2.setText("Nombre:");
 
-        jLabel3.setText("Rut:");
+        jLabel3.setText("ID:");
 
         jLabel4.setText("Asignatura:");
 
@@ -74,6 +76,8 @@ public class AdministradorAlumno extends javax.swing.JFrame {
 
         jLabel7.setText("Contraseña:");
 
+        jLabel8.setText("Nivel:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -83,20 +87,22 @@ public class AdministradorAlumno extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(67, 67, 67)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(btnGuardarAdminAlumno)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel7))
+                            .addComponent(jLabel3))
                         .addGap(38, 38, 38)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnModificarAdminAlumno)
-                                .addGap(34, 34, 34)
+                                .addGap(33, 33, 33)
                                 .addComponent(btnEliminarAdminAlumno))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtNivelAdminAlumno, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtClaveAdminAlumno, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtLoginAdminAlumno, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtNombreAdminAlumno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
@@ -106,7 +112,7 @@ public class AdministradorAlumno extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(160, 160, 160)
                         .addComponent(jLabel1)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,10 +145,14 @@ public class AdministradorAlumno extends javax.swing.JFrame {
                     .addComponent(txtAsignaturaAdminAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(txtNivelAdminAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarAdminAlumno)
                     .addComponent(btnModificarAdminAlumno)
                     .addComponent(btnEliminarAdminAlumno))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -210,11 +220,13 @@ public class AdministradorAlumno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField txtApellidoAdminAlumno;
     public javax.swing.JTextField txtAsignaturaAdminAlumno;
     public javax.swing.JTextField txtClaveAdminAlumno;
     public javax.swing.JTextField txtLoginAdminAlumno;
+    public javax.swing.JTextField txtNivelAdminAlumno;
     public javax.swing.JTextField txtNombreAdminAlumno;
     public javax.swing.JTextField txtRutAdminAlumno;
     // End of variables declaration//GEN-END:variables

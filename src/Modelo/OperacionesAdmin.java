@@ -12,7 +12,7 @@ public class OperacionesAdmin extends Conexion {
     public boolean guardarAlumno (Alumno alu){
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "INSERT INTO `alumno`(`id`,`login`,`clave`, `nombre`, `apellidos`) VALUES ('"+ alu.getIdAlumno()+"','"+ alu.getLoginAlumno()+"','"+ alu.getClaveAlumno()+"','"+ alu.getNombreAlumno()+"','"+ alu.getApellidoAlumno() +"')";      
+        String sql = "INSERT INTO `alumno`(`id`,`nivel_id`,`login`,`clave`, `nombre`, `apellidos`) VALUES ('"+ alu.getIdAlumno()+"','"+alu.getIdNivelAlumno()+"','"+ alu.getLoginAlumno()+"','"+ alu.getClaveAlumno()+"','"+ alu.getNombreAlumno()+"','"+ alu.getApellidoAlumno() +"')";      
         try{
             ps = con.prepareStatement(sql);
             rs = ps.executeUpdate(sql);
