@@ -1,7 +1,7 @@
 package Controlador;
 
 import Modelo.Alumno;
-import Modelo.OpAdminAlumno;
+import Modelo.OperacionesAdmin;
 import Vista.AdministradorAlumno;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,10 +10,10 @@ import javax.swing.JOptionPane;
 public class ControladorAlumno implements ActionListener {
     
     private Alumno mod;
-    private OpAdminAlumno modOp;
+    private OperacionesAdmin modOp;
     private AdministradorAlumno modList;
     
-    public ControladorAlumno (Alumno mod, OpAdminAlumno modOp, AdministradorAlumno modList){
+    public ControladorAlumno (Alumno mod, OperacionesAdmin modOp, AdministradorAlumno modList){
         this.mod = mod;
         this.modOp = modOp;
         this.modList = modList;
@@ -36,7 +36,7 @@ public class ControladorAlumno implements ActionListener {
             mod.setLoginAlumno(modList.txtLoginAdminAlumno.getText());
             mod.setClaveAlumno(modList.txtClaveAdminAlumno.getText());
             
-            if (modOp.guardar(mod)) {
+            if (modOp.guardarAlumno(mod)) {
                 JOptionPane.showMessageDialog(null, "Alumno Guardado");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al guardar");
@@ -47,7 +47,7 @@ public class ControladorAlumno implements ActionListener {
             mod.setNombreAlumno(modList.txtNombreAdminAlumno.getText());
             mod.setApellidoAlumno(modList.txtApellidoAdminAlumno.getText());
             
-            if (modOp.modificar(mod)) {
+            if (modOp.modificarAlumno(mod)) {
                 JOptionPane.showMessageDialog(null, "Equipo Modificado");
                 limpiar();
             } else {
@@ -59,7 +59,7 @@ public class ControladorAlumno implements ActionListener {
         if (e.getSource() == modList.btnEliminarAdminAlumno){
             mod.setIdAlumno(Integer.parseInt(modList.txtRutAdminAlumno.getText()));
             
-            if (modOp.eliminar(mod)) {
+            if (modOp.eliminarAlumno(mod)) {
                 JOptionPane.showMessageDialog(null, "Alumno Eliminado");
                 limpiar();
             } else {

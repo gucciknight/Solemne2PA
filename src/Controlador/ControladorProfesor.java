@@ -1,7 +1,7 @@
 package Controlador;
 
 import Modelo.Profesor;
-import Modelo.OpAdminProfesor;
+import Modelo.OperacionesAdmin;
 import Vista.AdministradorProfesor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,10 +9,10 @@ import javax.swing.JOptionPane;
 
 public class ControladorProfesor implements ActionListener{
     private Profesor mod;
-    private OpAdminProfesor modOp;
+    private OperacionesAdmin modOp;
     private AdministradorProfesor modList;
     
-    public ControladorProfesor (Profesor mod, OpAdminProfesor modOp, AdministradorProfesor modList){
+    public ControladorProfesor (Profesor mod, OperacionesAdmin modOp, AdministradorProfesor modList){
         this.mod = mod;
         this.modOp = modOp;
         this.modList = modList;
@@ -36,7 +36,7 @@ public class ControladorProfesor implements ActionListener{
             mod.setClaveProfesor(modList.passContrasenaAdminProfesor.getText());
             mod.setEspecialistaProfesor(Integer.parseInt(modList.txtAsignaturaAdminProfesor.getText()));
             
-            if (modOp.guardar(mod)) {
+            if (modOp.guardarProfesor(mod)) {
                 JOptionPane.showMessageDialog(null, "Profesor Guardado");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al guardar");
@@ -49,7 +49,7 @@ public class ControladorProfesor implements ActionListener{
             mod.setEmailProfesor(modList.txtEmailAdminProfesor.getText());
             mod.setEspecialistaProfesor(Integer.parseInt(modList.txtAsignaturaAdminProfesor.getText()));
             
-            if (modOp.modificar(mod)) {
+            if (modOp.modificarProfesor(mod)) {
                 JOptionPane.showMessageDialog(null, "Profesor Modificado");
                 limpiar();
             } else {
@@ -61,7 +61,7 @@ public class ControladorProfesor implements ActionListener{
         if (e.getSource() == modList.btnEliminarAdminProfesor){
             mod.setIdProfesor(Integer.parseInt(modList.txtRutAdminProfesor.getText()));
             
-            if (modOp.eliminar(mod)) {
+            if (modOp.eliminarProfesor(mod)) {
                 JOptionPane.showMessageDialog(null, "Profesor Eliminado");
                 limpiar();
             } else {
