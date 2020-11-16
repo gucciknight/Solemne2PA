@@ -1,5 +1,5 @@
 project-root-directory/
-+ build/*
++ build/
 + dist/
 + nbproject/
   build-impl.xml
@@ -9,3 +9,4 @@ project-root-directory/
 + src/
 + test/
 + build.xml
+build/*
