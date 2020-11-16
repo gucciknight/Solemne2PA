@@ -1,7 +1,9 @@
 package Controlador;
 
+import Modelo.Asignatura;
 import Modelo.Profesor;
 import Modelo.OperacionesAdmin;
+import Vista.AdministradorAsignatura;
 import Vista.AdministradorProfesor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +21,10 @@ public class ControladorProfesor implements ActionListener{
         this.modList.btnGuardarAdminProfesor.addActionListener(this);
         this.modList.btnEliminarAdminProfesor.addActionListener(this);
         this.modList.btnModificarAdminProfesor.addActionListener(this);
+    }
+
+    public ControladorProfesor(Asignatura mod, OperacionesAdmin modOp, AdministradorAsignatura modList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public void iniciar() {

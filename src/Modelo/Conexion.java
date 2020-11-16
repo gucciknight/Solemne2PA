@@ -9,7 +9,7 @@ public class Conexion {
     private final String user = "sql10376396";
     private final String password = "bMXXWE3ySg";
     private final String url = "jdbc:mysql://sql10.freemysqlhosting.net:3306/sql10376396";
-    private Connection con = null;
+    Connection con = null;
 
     public Connection getConexion() {
         try {
