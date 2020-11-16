@@ -5,6 +5,8 @@
  */
 package Solemne2;
 
+import Vista.*;
+
 /**
  *
  * @author arluna
@@ -12,6 +14,8 @@ package Solemne2;
         
 public class Solemne2 {
         public static void main(String[] args) {
-
+            
+            Login login = new Login();
+            login.setVisible(true);
     }
 }

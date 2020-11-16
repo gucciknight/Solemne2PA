@@ -14,8 +14,8 @@ public class OperacionesAlumno extends Conexion {
         ResultSet rs = null;
         Connection con = getConexion();
         try{
-            String sql = "select `nombre`, `apellido` from `alumno` where id = "+ eq.nivelAlumno +"";
-            rs = ps.executeQuery(sql);
+           // String sql = "select `nombre`, `apellido` from `alumno` where id = "+ eq.nivelAlumno +"";
+           // rs = ps.executeQuery(sql);
             System.out.println("Data from online Database :");
             while(rs.next()){
                 String nombre = rs.getString("nombre");
