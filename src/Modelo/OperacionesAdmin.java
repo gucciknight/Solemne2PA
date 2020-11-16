@@ -12,7 +12,7 @@ public class OperacionesAdmin extends Conexion {
     public boolean guardarAlumno (Alumno alu){
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "INSERT INTO `alumno`(`id`,`login`,`clave`, `nombre`, `apellidos`) VALUES ('"+ alu.getIdAlumno()+"','"+ alu.getLoginAlumno()+"','"+ alu.getClaveAlumno()+"','"+ alu.getNombreAlumno()+"','"+ alu.getApellidoAlumno() +"')";      
+        String sql = "INSERT INTO `alumno`(`id`,`nivel_id`,`login`,`clave`, `nombre`, `apellidos`) VALUES ('"+ alu.getIdAlumno()+"','"+alu.getIdNivelAlumno()+"','"+ alu.getLoginAlumno()+"','"+ alu.getClaveAlumno()+"','"+ alu.getNombreAlumno()+"','"+ alu.getApellidoAlumno() +"')";      
         try{
             ps = con.prepareStatement(sql);
             rs = ps.executeUpdate(sql);
@@ -148,4 +148,72 @@ public class OperacionesAdmin extends Conexion {
         }
     }
     
+    public boolean guardarAsignatura (Asignatura asign){
+        PreparedStatement ps = null;
+        Connection con = getConexion();
+        String sql = "INSERT INTO `asignatura`(`nivel_id`,`profesor_id`,`nombre`) VALUES ('"+ asign.getIdNivelAsignatura()+"','"+asign.getIdProfesor()+"','"+asign.getNombreAsignatura()+"')";
+        try {    
+            ps = con.prepareStatement(sql);
+            rs = ps.executeUpdate(sql);
+            System.out.println(asign.idAsignatura);
+            System.out.println("Data from online Database :");
+            return true;
+            
+        } catch (SQLException e) {
+            System.err.println(e);
+            return false;
+            
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.err.println(e);
+              }          
+          }   
+    }
+    public boolean modificarAsignatura (Asignatura asign) {
+        PreparedStatement ps = null;
+        Connection con = getConexion();
+        String sql = "UPDATE asignatura SET nombre = ?, nivel_id = ?, profesor_id = ? WHERE id = ?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, asign.getNombreAsignatura());
+            ps.setInt(2, asign.getIdNivelAsignatura());
+            ps.setInt(3, asign.getIdProfesor());
+            ps.setInt(4, asign.idAsignatura);
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.err.println(e);
+            }
+        }
+    }
+    
+    public boolean eliminarAsignatura(Asignatura asign) {
+        PreparedStatement ps = null;
+        Connection con = getConexion();
+        String sql = "DELETE FROM asignatura WHERE id = ?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, asign.idAsignatura);
+            System.out.println(asign.idAsignatura);
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.err.println(e);
+            }
+        }
+    }
 }
