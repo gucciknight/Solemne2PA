@@ -48,6 +48,11 @@ public class Login extends javax.swing.JFrame {
         btnIngresar.setText("Ingresar");
 
         btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
         cbUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Indique tipo de usuario", "Administrador", "Profesor", "Alumno" }));
 
@@ -110,6 +115,10 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -146,9 +155,9 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnIngresar;
-    private javax.swing.JButton btnSalir;
-    private javax.swing.JComboBox<String> cbUsuario;
+    public javax.swing.JButton btnIngresar;
+    public javax.swing.JButton btnSalir;
+    public javax.swing.JComboBox<String> cbUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
