@@ -4,10 +4,12 @@ import Modelo.Alumno;
 import Modelo.Asignatura;
 import Modelo.OperacionesAdmin;
 import Modelo.Profesor;
+import Vista.AdministradorPanel;
 import Vista.AdministradorAlumno;
-import Vista.AdministradorAsignatura;
 import Vista.AdministradorProfesor;
 import Vista.Login;
+import Vista.AlumnoPanel;
+import Vista.ProfesorPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -39,33 +41,25 @@ public class ControladorLogin implements ActionListener {
             modList.setVisible(false);
             
             if (seleccion() == "Alumno"){
-                Alumno mod = new Alumno();
-                OperacionesAdmin modOp = new OperacionesAdmin();
-                AdministradorAlumno modList = new AdministradorAlumno();
-                ControladorAlumno ctrl = new ControladorAlumno(mod, modOp, modList);
+                AlumnoPanel modList = new AlumnoPanel();
+                ControladorPanelAlumno ctrl = new ControladorPanelAlumno(modList);
                 ctrl.iniciar();
                 modList.setVisible(true);                
             }
             if (seleccion()== "Profesor"){
-                Profesor mod = new Profesor();
-                OperacionesAdmin modOp = new OperacionesAdmin();
-                AdministradorProfesor modList = new AdministradorProfesor();
-                ControladorProfesor ctrl = new ControladorProfesor(mod, modOp, modList);
+                ProfesorPanel modList = new ProfesorPanel();
+                ControladorPanelProfesor ctrl = new ControladorPanelProfesor(modList);
                 ctrl.iniciar();
                 modList.setVisible(true);
             }
             
             if (seleccion()=="Administrador"){
-                Asignatura mod = new Asignatura();
-                OperacionesAdmin modOp = new OperacionesAdmin();
-                AdministradorAsignatura modList = new AdministradorAsignatura();
-                ControladorAsignatura ctrl = new ControladorAsignatura(mod, modOp, modList);
+                AdministradorPanel modList = new AdministradorPanel();
+                ControladorPanelAdministrador ctrl = new ControladorPanelAdministrador(modList);
                 ctrl.iniciar();
                 modList.setVisible(true);
             }
-            
         }
-        
         if (e.getSource() == modList.btnSalir){
             JOptionPane.showMessageDialog(null, "Salido con exito");
             modList.dispose();

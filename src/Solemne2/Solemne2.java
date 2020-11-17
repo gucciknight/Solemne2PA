@@ -18,36 +18,5 @@ public class Solemne2 {
             ControladorLogin control = new ControladorLogin(loginList);
             control.iniciar();
             loginList.setVisible(true);
-            String seleccion = control.seleccion();
-            
-            if (seleccion=="Alumno"){
-                System.out.println(seleccion);
-                Alumno mod = new Alumno();
-                OperacionesAdmin modOp = new OperacionesAdmin();
-                AdministradorAlumno modList = new AdministradorAlumno();
-                ControladorAlumno ctrl = new ControladorAlumno(mod, modOp, modList);
-                ctrl.iniciar();
-                modList.setVisible(true);
-            }
-            
-            if (seleccion== "Profesor"){
-                System.out.println(seleccion);
-                Profesor mod = new Profesor();
-                OperacionesAdmin modOp = new OperacionesAdmin();
-                AdministradorProfesor modList = new AdministradorProfesor();
-                ControladorProfesor ctrl = new ControladorProfesor(mod, modOp, modList);
-                ctrl.iniciar();
-                modList.setVisible(true);
-            }
-            
-            if (seleccion=="Administrador"){
-                System.out.println(seleccion);
-                Asignatura mod = new Asignatura();
-                OperacionesAdmin modOp = new OperacionesAdmin();
-                AdministradorAsignatura modList = new AdministradorAsignatura();
-                ControladorAsignatura ctrl = new ControladorAsignatura(mod, modOp, modList);
-                ctrl.iniciar();
-                modList.setVisible(true);
-            }
     }
 }
