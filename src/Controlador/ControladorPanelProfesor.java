@@ -1,5 +1,7 @@
 package Controlador;
 
+import Modelo.OperacionesProfesor;
+import Modelo.Profesor;
 import Vista.ProfesorPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,7 +29,9 @@ public class ControladorPanelProfesor implements ActionListener {
             System.out.println("Prueba Asignaturas");
             }
         if (e.getSource() == ProfList.btnProfesores) {
-            System.out.println("Prueba Profesores");
+            Profesor profe = new Profesor();
+            OperacionesProfesor opprof = new OperacionesProfesor();
+            opprof.ListarProfesores(profe);
             }
             
         if (e.getSource() == ProfList.btnRegistrarNotas) {

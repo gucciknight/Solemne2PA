@@ -52,25 +52,15 @@ public class OperacionesAlumno extends Conexion {
     }
     
     public void ListarAlumnos(Alumno al ) {
-        PreparedStatement ps = null;
-        Connection con = getConexion();
-
-        String sql = "select `nombre`, `apellidos` from `alumno` where nivel_id =" + al.getIdNivelAlumno() +"";
-
         try{
+           PreparedStatement ps = null;
+           Connection con = getConexion();
+           String sql = "SELECT nombre, apellidos FROM `alumno`";
            ps = con.prepareStatement(sql);
            rs = ps.executeQuery(sql);
            Listado listado = new Listado();
            listado.setVisible(true);
            listado.fetch(rs);
-            /*while(rs.next()){
-                String nombre = rs.getString("nombre");
-                String apellido = rs.getString("apellidos");
-                System.out.println("nombre:" + nombre +" "+"apellido: "+ apellido +"");
-                Listado listado = new Listado();
-                listado.jFrame1.setModel(DbUtils.resultSetToTableModel(rs));
-            }*/
-            
         }catch(Exception ex){
             System.out.println("Error is found :"+ex);
         }

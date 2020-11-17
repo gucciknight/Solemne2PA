@@ -1,6 +1,7 @@
 package Controlador;
 
-import Modelo.AlumnoAsignatura;
+import Modelo.Alumno;
+import Modelo.OperacionesAlumno;
 import Vista.AlumnoPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,7 +26,9 @@ public class ControladorPanelAlumno implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         
         if (e.getSource() == AluList.btnConectados) {
-            AlumnoAsignatura Alu = new AlumnoAsignatura();
+            Alumno alu = new Alumno();
+            OperacionesAlumno opal = new OperacionesAlumno();
+            opal.ListarAlumnos(alu);
             
             }
         
