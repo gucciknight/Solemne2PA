@@ -4,10 +4,42 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class OperacionesAdmin extends Conexion {
+    public ResultSet rs;
+    private Statement st;
+    private int rsi;
+    private Connection con;
     
-    private int rs;
+    public Administrador LoginAdmin(String login, String contrasena){
+       PreparedStatement ps = null;
+       Connection con = getConexion(); 
+       
+       String sql = "SELECT * FROM `administrador` WHERE `login` = '"+ login +"' and `clave` = '"+ contrasena +"'";
+       Administrador admin = new Administrador();
+       
+       try{
+           ps = con.prepareStatement(sql);
+           rs = ps.executeQuery(sql);
+           
+           while(rs.next()){
+           int id = rs.getInt("id");
+           String email = rs.getString("email");
+           
+           admin.setIdAdmin(id);
+           admin.setEmailAdmin(email);
+           admin.setLoginAdmin(login);
+           admin.setClaveAdmin(contrasena);
+           }
+           System.out.println(admin.getEmailAdmin());
+       
+       }catch(Exception ex){
+           System.out.println("Error is found :"+ex);
+        }
+    
+      return admin;
+    }
         
     public boolean guardarAlumno (Alumno alu){
         PreparedStatement ps = null;
@@ -15,7 +47,7 @@ public class OperacionesAdmin extends Conexion {
         String sql = "INSERT INTO `alumno`(`id`,`nivel_id`,`login`,`clave`, `nombre`, `apellidos`) VALUES ('"+ alu.getIdAlumno()+"','"+alu.getIdNivelAlumno()+"','"+ alu.getLoginAlumno()+"','"+ alu.getClaveAlumno()+"','"+ alu.getNombreAlumno()+"','"+ alu.getApellidoAlumno() +"')";      
         try{
             ps = con.prepareStatement(sql);
-            rs = ps.executeUpdate(sql);
+            rsi = ps.executeUpdate(sql);
             System.out.println(alu.idAlumno);
             System.out.println("Data from online Database :");
             return true;
@@ -84,7 +116,7 @@ public class OperacionesAdmin extends Conexion {
         String sql = "INSERT INTO `profesor`(`id`,`login`,`clave`,`nombre`,`apellidos`,`email`,`especialista`) VALUES ('"+ prof.getIdProfesor()+"','"+ prof.getLoginProfesor()+"','"+ prof.getClaveProfesor()+"','"+ prof.getNombreProfesor()+"','"+ prof.getApellidoProfesor() +"','" + prof.getEmailProfesor() + "','" + prof.getEspecialistaProfesor()+ "')";      
         try{
             ps = con.prepareStatement(sql);
-            rs = ps.executeUpdate(sql);
+            rsi = ps.executeUpdate(sql);
             System.out.println(prof.idProfesor);
             System.out.println("Data from online Database :");
             return true;
@@ -154,7 +186,7 @@ public class OperacionesAdmin extends Conexion {
         String sql = "INSERT INTO `asignatura`(`nivel_id`,`profesor_id`,`nombre`) VALUES ('"+ asign.getIdNivelAsignatura()+"','"+asign.getIdProfesor()+"','"+asign.getNombreAsignatura()+"')";
         try {    
             ps = con.prepareStatement(sql);
-            rs = ps.executeUpdate(sql);
+            rsi = ps.executeUpdate(sql);
             System.out.println(asign.idAsignatura);
             System.out.println("Data from online Database :");
             return true;

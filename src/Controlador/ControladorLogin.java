@@ -1,5 +1,6 @@
 package Controlador;
 
+import Modelo.Administrador;
 import Modelo.Alumno;
 import Modelo.Asignatura;
 import Modelo.OperacionesAdmin;
@@ -61,6 +62,9 @@ public class ControladorLogin implements ActionListener {
             }
             
             if (seleccion()=="Administrador"){
+                OperacionesAdmin opad = new OperacionesAdmin();
+                Administrador admin = opad.LoginAdmin(this.modList.txtUser.getText(), this.modList.txtPass.getText());
+                System.out.println(admin.getEmailAdmin());
                 AdministradorPanel modList = new AdministradorPanel();
                 ControladorPanelAdministrador ctrl = new ControladorPanelAdministrador(modList);
                 ctrl.iniciar();

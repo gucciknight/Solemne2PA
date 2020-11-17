@@ -1,5 +1,6 @@
 package Controlador;
 
+import Modelo.AlumnoAsignatura;
 import Vista.AlumnoPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,7 +25,8 @@ public class ControladorPanelAlumno implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         
         if (e.getSource() == AluList.btnConectados) {
-            System.out.println("Prueba Conectados");
+            AlumnoAsignatura Alu = new AlumnoAsignatura();
+            
             }
         
         if (e.getSource() == AluList.btnProfesores) {

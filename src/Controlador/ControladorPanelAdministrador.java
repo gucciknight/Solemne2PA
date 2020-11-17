@@ -29,9 +29,8 @@ public class ControladorPanelAdministrador implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        AdmList.setVisible(false);
         if (e.getSource() == AdmList.btnAlumno) {
-            AdmList.setVisible(false);
             Alumno mod = new Alumno();
             OperacionesAdmin modOp = new OperacionesAdmin();
             AdministradorAlumno modList = new AdministradorAlumno();
@@ -41,7 +40,6 @@ public class ControladorPanelAdministrador implements ActionListener {
             }
         
         if (e.getSource() == AdmList.btnProfesor) {
-            AdmList.setVisible(false);
             Profesor mod = new Profesor();
             OperacionesAdmin modOp = new OperacionesAdmin();
             AdministradorProfesor modList = new AdministradorProfesor();
@@ -51,7 +49,6 @@ public class ControladorPanelAdministrador implements ActionListener {
             }
             
         if (e.getSource() == AdmList.btnAsignatura) {
-            AdmList.setVisible(false);
             Asignatura mod = new Asignatura();
             OperacionesAdmin modOp = new OperacionesAdmin();
             AdministradorAsignatura modList = new AdministradorAsignatura();
@@ -59,5 +56,5 @@ public class ControladorPanelAdministrador implements ActionListener {
             ctrl.iniciar();
             modList.setVisible(true);
             }
-    } 
+    }
 }

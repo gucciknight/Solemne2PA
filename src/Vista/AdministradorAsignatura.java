@@ -203,6 +203,11 @@ public class AdministradorAsignatura extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tablaAsignaturas);
 
         btnVolverAdminAsignatura.setText("Volver");
+        btnVolverAdminAsignatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverAdminAsignaturaActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("Asignaturas");
@@ -246,6 +251,10 @@ public class AdministradorAsignatura extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVolverAdminAsignaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverAdminAsignaturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverAdminAsignaturaActionPerformed
 
     /**
      * @param args the command line arguments

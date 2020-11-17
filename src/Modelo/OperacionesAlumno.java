@@ -16,7 +16,6 @@ public class OperacionesAlumno extends Conexion {
      public ResultSet rs;
      private Statement st;
      private Connection con;
-
      
     public Alumno LoginAlumno(String login, String contrasena){
        PreparedStatement ps = null;
