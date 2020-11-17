@@ -29,7 +29,6 @@ public class ControladorPanelAdministrador implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        AdmList.setVisible(false);
         if (e.getSource() == AdmList.btnAlumno) {
             Alumno mod = new Alumno();
             OperacionesAdmin modOp = new OperacionesAdmin();
