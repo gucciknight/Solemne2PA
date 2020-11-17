@@ -4,6 +4,7 @@ import Modelo.Alumno;
 import Modelo.Asignatura;
 import Modelo.OperacionesAdmin;
 import Modelo.Profesor;
+import Modelo.OperacionesAlumno;
 import Vista.AdministradorPanel;
 import Vista.AdministradorAlumno;
 import Vista.AdministradorProfesor;
@@ -22,6 +23,8 @@ public class ControladorLogin implements ActionListener {
         this.modList = modList;
         this.modList.btnIngresar.addActionListener(this);
         this.modList.btnSalir.addActionListener(this);
+        this.modList.txtPass.getText();
+        this.modList.txtUser.getText();
     }
     
     public void iniciar() {
@@ -41,10 +44,14 @@ public class ControladorLogin implements ActionListener {
             modList.setVisible(false);
             
             if (seleccion() == "Alumno"){
+                OperacionesAlumno opal = new OperacionesAlumno();
+                Alumno alumno = opal.LoginAlumno(this.modList.txtUser.getText(), this.modList.txtPass.getText());
+                System.out.println(alumno.getIdAlumno());
+                
                 AlumnoPanel modList = new AlumnoPanel();
                 ControladorPanelAlumno ctrl = new ControladorPanelAlumno(modList);
                 ctrl.iniciar();
-                modList.setVisible(true);                
+                modList.setVisible(true);
             }
             if (seleccion()== "Profesor"){
                 ProfesorPanel modList = new ProfesorPanel();
