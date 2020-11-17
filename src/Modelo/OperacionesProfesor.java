@@ -10,19 +10,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
-import Modelo.Alumno;
 
-public class OperacionesAlumno extends Conexion {
+public class OperacionesProfesor extends Conexion {
      public ResultSet rs;
      private Statement st;
      private Connection con;
      
-    public Alumno LoginAlumno(String login, String contrasena){
+    public Profesor LoginProfesor(String login, String contrasena){
        PreparedStatement ps = null;
        Connection con = getConexion(); 
        
-       String sql = "SELECT * FROM `alumno` WHERE `login` = '"+ login +"' and `clave` = '"+ contrasena +"'";
-       Alumno alumno = new Alumno();
+       String sql = "SELECT * FROM `profesor` WHERE `login` = '"+ login +"' and `clave` = '"+ contrasena +"'";
+       Profesor profesor = new Profesor();
        
        try{
            ps = con.prepareStatement(sql);
@@ -31,27 +30,29 @@ public class OperacionesAlumno extends Conexion {
            while(rs.next()){
            int id = rs.getInt("id");
            String nombre = rs.getString("nombre");
-           String apellidos = rs.getString("apellidos");        
-           int nivel_id = rs.getInt("nivel_id");
+           String apellidos = rs.getString("apellidos");
+           String email = rs.getString("email");
+           int especialista = rs.getInt("especialista");
            
-           alumno.setNombreAlumno(nombre);           
-           alumno.setApellidoAlumno(apellidos);
-           alumno.setClaveAlumno(contrasena);
-           alumno.setIdAlumno(id);
-           alumno.setIdNivelAlumno(nivel_id);
-           alumno.setLoginAlumno(login);
-           alumno.setNombreAlumno(nombre);
+           profesor.setNombreProfesor(nombre);
+           profesor.setApellidoProfesor(apellidos);
+           profesor.setEmailProfesor(email);
+           profesor.setLoginProfesor(login);
+           profesor.setClaveProfesor(contrasena);
+           profesor.setIdProfesor(id);
+           profesor.setEspecialistaProfesor(especialista);
            }
-           System.out.println(alumno.getNombreAlumno());
+           System.out.println(profesor.getNombreProfesor()+" "+ profesor.getApellidoProfesor());
+           System.out.println(profesor.getEmailProfesor());
        
        }catch(SQLException ex){
            System.out.println("Error is found :"+ex);
         }
     
-      return alumno;
+      return profesor;
     }
     
-    public void ListarAlumnos(Alumno al ) {
+    public void ListarAlumnos(Alumno al ) {/*
         PreparedStatement ps = null;
         Connection con = getConexion();
 
@@ -69,10 +70,10 @@ public class OperacionesAlumno extends Conexion {
                 System.out.println("nombre:" + nombre +" "+"apellido: "+ apellido +"");
                 Listado listado = new Listado();
                 listado.jFrame1.setModel(DbUtils.resultSetToTableModel(rs));
-            }*/
+            }
             
         }catch(Exception ex){
             System.out.println("Error is found :"+ex);
-        }
+        }*/
     }
 }

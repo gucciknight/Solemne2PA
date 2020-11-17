@@ -6,6 +6,7 @@ import Modelo.Asignatura;
 import Modelo.OperacionesAdmin;
 import Modelo.Profesor;
 import Modelo.OperacionesAlumno;
+import Modelo.OperacionesProfesor;
 import Vista.AdministradorPanel;
 import Vista.AdministradorAlumno;
 import Vista.AdministradorProfesor;
@@ -55,6 +56,10 @@ public class ControladorLogin implements ActionListener {
                 modList.setVisible(true);
             }
             if (seleccion()== "Profesor"){
+                OperacionesProfesor opprof = new OperacionesProfesor();
+                Profesor profe = opprof.LoginProfesor(this.modList.txtUser.getText(), this.modList.txtPass.getText());
+                System.out.println(profe.getIdProfesor());
+                
                 ProfesorPanel modList = new ProfesorPanel();
                 ControladorPanelProfesor ctrl = new ControladorPanelProfesor(modList);
                 ctrl.iniciar();
@@ -65,6 +70,7 @@ public class ControladorLogin implements ActionListener {
                 OperacionesAdmin opad = new OperacionesAdmin();
                 Administrador admin = opad.LoginAdmin(this.modList.txtUser.getText(), this.modList.txtPass.getText());
                 System.out.println(admin.getEmailAdmin());
+                
                 AdministradorPanel modList = new AdministradorPanel();
                 ControladorPanelAdministrador ctrl = new ControladorPanelAdministrador(modList);
                 ctrl.iniciar();
