@@ -7,7 +7,6 @@ import Modelo.Asignatura;
 import Modelo.OperacionesAdmin;
 import Vista.*;
 import java.util.*;
-import javax.swing.*;
         
 public class Solemne2 {
         public static void main(String[] args) {            
@@ -19,36 +18,36 @@ public class Solemne2 {
             ControladorLogin control = new ControladorLogin(loginList);
             control.iniciar();
             loginList.setVisible(true);
+            String seleccion = control.seleccion();
             
-                       
-            if (control.seleccion()== "Alumno"){
+            if (seleccion=="Alumno"){
+                System.out.println(seleccion);
                 Alumno mod = new Alumno();
                 OperacionesAdmin modOp = new OperacionesAdmin();
                 AdministradorAlumno modList = new AdministradorAlumno();
                 ControladorAlumno ctrl = new ControladorAlumno(mod, modOp, modList);
                 ctrl.iniciar();
                 modList.setVisible(true);
-                System.out.println(control.seleccion());
             }
             
-            if (control.seleccion() == "Profesor"){
+            if (seleccion== "Profesor"){
+                System.out.println(seleccion);
                 Profesor mod = new Profesor();
                 OperacionesAdmin modOp = new OperacionesAdmin();
                 AdministradorProfesor modList = new AdministradorProfesor();
                 ControladorProfesor ctrl = new ControladorProfesor(mod, modOp, modList);
                 ctrl.iniciar();
                 modList.setVisible(true);
-                System.out.println(control.seleccion());
             }
             
-            if (control.seleccion() == "administrador"){
+            if (seleccion=="Administrador"){
+                System.out.println(seleccion);
                 Asignatura mod = new Asignatura();
                 OperacionesAdmin modOp = new OperacionesAdmin();
                 AdministradorAsignatura modList = new AdministradorAsignatura();
                 ControladorAsignatura ctrl = new ControladorAsignatura(mod, modOp, modList);
                 ctrl.iniciar();
                 modList.setVisible(true);
-                System.out.println(control.seleccion());
             }
     }
 }
