@@ -24,7 +24,7 @@ public class ControladorAlumno implements ActionListener {
     
     public void iniciar() {
         
-        modList.setTitle("Listado de Alumnos");
+        modList.setTitle("Gestion de Alumnos");
         modList.setLocationRelativeTo(null);
     }  
     @Override

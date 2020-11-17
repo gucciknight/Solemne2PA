@@ -52,7 +52,7 @@ public class AdministradorAsignatura extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         txtAsignaturaAdminAsignatura7 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tablaAsignaturas = new javax.swing.JTable();
         btnVolverAdminAsignatura = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -189,7 +189,7 @@ public class AdministradorAsignatura extends javax.swing.JFrame {
                 .addGap(84, 84, 84))
         );
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tablaAsignaturas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -200,7 +200,7 @@ public class AdministradorAsignatura extends javax.swing.JFrame {
                 "id", "Nombre", "Nivel", "Profesor"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tablaAsignaturas);
 
         btnVolverAdminAsignatura.setText("Volver");
 
@@ -302,7 +302,7 @@ public class AdministradorAsignatura extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JTable tablaAsignaturas;
     public javax.swing.JTextField txtAsignaturaAdminAsignatura;
     public javax.swing.JTextField txtAsignaturaAdminAsignatura1;
     public javax.swing.JTextField txtAsignaturaAdminAsignatura2;

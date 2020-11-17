@@ -29,7 +29,7 @@ public class ControladorProfesor implements ActionListener{
     
     public void iniciar() {
         
-        modList.setTitle("Listado de Profesores");
+        modList.setTitle("Gestion de Profesores");
         modList.setLocationRelativeTo(null);
     }  
 

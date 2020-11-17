@@ -24,7 +24,7 @@ public class ControladorAsignatura implements ActionListener {
     
     public void iniciar() {
         
-        modList.setTitle("Listado de Alumnos");
+        modList.setTitle("Gestion Asignaturas");
         modList.setLocationRelativeTo(null);
     }  
     @Override
@@ -79,6 +79,5 @@ public class ControladorAsignatura implements ActionListener {
         modList.txtAsignaturaAdminAsignatura5.setText(null);
         modList.txtAsignaturaAdminAsignatura6.setText(null);
         modList.txtAsignaturaAdminAsignatura7.setText(null);
-        /*modList.txtAsignaturaAdminAlumno.setText(null);*/
     } 
 }
