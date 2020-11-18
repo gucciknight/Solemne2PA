@@ -39,7 +39,8 @@ public class ControladorProfesor implements ActionListener{
             mod.setNombreProfesor(modList.txtNombreAdminProfesor.getText());
             mod.setApellidoProfesor(modList.txtApellidoAdminProfesor.getText());
             mod.setEmailProfesor(modList.txtEmailAdminProfesor.getText());
-            mod.setClaveProfesor(modList.passContrasenaAdminProfesor.getText());
+            mod.setLoginProfesor(modList.txtLoginAdminProfesor.getText());
+            mod.setClaveProfesor(modList.txtclaveAdminProfesor.getText());
             mod.setEspecialistaProfesor(Integer.parseInt(modList.txtAsignaturaAdminProfesor.getText()));
             
             if (modOp.guardarProfesor(mod)) {
@@ -50,9 +51,12 @@ public class ControladorProfesor implements ActionListener{
         }
         
         if (e.getSource() == modList.btnModificarAdminProfesor) {
+            mod.setIdProfesor(Integer.parseInt(modList.txtRutAdminProfesor.getText()));
+            mod.setLoginProfesor(modList.txtLoginAdminProfesor.getText());
+            mod.setClaveProfesor(modList.txtclaveAdminProfesor.getText());
             mod.setNombreProfesor(modList.txtNombreAdminProfesor.getText());
             mod.setApellidoProfesor(modList.txtApellidoAdminProfesor.getText());
-            mod.setEmailProfesor(modList.txtEmailAdminProfesor.getText());
+            mod.setEmailProfesor(modList.txtLoginAdminProfesor.getText());
             mod.setEspecialistaProfesor(Integer.parseInt(modList.txtAsignaturaAdminProfesor.getText()));
             
             if (modOp.modificarProfesor(mod)) {
@@ -83,8 +87,9 @@ public class ControladorProfesor implements ActionListener{
         modList.txtApellidoAdminProfesor.setText(null);
         modList.txtRutAdminProfesor.setText(null);
         modList.txtEmailAdminProfesor.setText(null);
-        modList.passContrasenaAdminProfesor.setText(null);
+        modList.txtclaveAdminProfesor.setText(null);
         modList.txtAsignaturaAdminProfesor.setText(null);
+        modList.txtLoginAdminProfesor.setText(null);
     } 
 }
 

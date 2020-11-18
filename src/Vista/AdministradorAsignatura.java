@@ -253,7 +253,7 @@ public class AdministradorAsignatura extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVolverAdminAsignaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverAdminAsignaturaActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
     }//GEN-LAST:event_btnVolverAdminAsignaturaActionPerformed
 
     /**

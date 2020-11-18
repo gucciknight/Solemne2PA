@@ -52,6 +52,11 @@ public class ProfesorNota extends javax.swing.JFrame {
         btnGuardarProfesorNota.setText("Guardar");
 
         btnVolverProfesorNota.setText("Volver");
+        btnVolverProfesorNota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverProfesorNotaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -118,6 +123,10 @@ public class ProfesorNota extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVolverProfesorNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverProfesorNotaActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVolverProfesorNotaActionPerformed
 
     /**
      * @param args the command line arguments

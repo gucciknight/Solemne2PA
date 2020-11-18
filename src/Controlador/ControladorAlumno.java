@@ -35,6 +35,7 @@ public class ControladorAlumno implements ActionListener {
             mod.setApellidoAlumno(modList.txtApellidoAdminAlumno.getText());
             mod.setLoginAlumno(modList.txtLoginAdminAlumno.getText());
             mod.setClaveAlumno(modList.txtClaveAdminAlumno.getText());
+            mod.setIdNivelAlumno(Integer.parseInt(modList.txtNivelAdminAlumno.getText()));
             
             if (modOp.guardarAlumno(mod)) {
                 JOptionPane.showMessageDialog(null, "Alumno Guardado");
@@ -44,11 +45,15 @@ public class ControladorAlumno implements ActionListener {
         }
         
           if (e.getSource() == modList.btnModificarAdminAlumno) {
+            mod.setIdAlumno(Integer.parseInt(modList.txtRutAdminAlumno.getText()));
+            mod.setLoginAlumno(modList.txtLoginAdminAlumno.getText());
+            mod.setClaveAlumno(modList.txtClaveAdminAlumno.getText());
             mod.setNombreAlumno(modList.txtNombreAdminAlumno.getText());
             mod.setApellidoAlumno(modList.txtApellidoAdminAlumno.getText());
+            mod.setIdNivelAlumno(Integer.parseInt(modList.txtNivelAdminAlumno.getText()));
             
             if (modOp.modificarAlumno(mod)) {
-                JOptionPane.showMessageDialog(null, "Equipo Modificado");
+                JOptionPane.showMessageDialog(null, "Alumno Modificado");
                 limpiar();
             } else {
                 JOptionPane.showMessageDialog(null, "Error al Modificar");

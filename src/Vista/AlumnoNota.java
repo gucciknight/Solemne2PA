@@ -39,6 +39,11 @@ public class AlumnoNota extends javax.swing.JFrame {
         jLabel3.setText("Asignatura:");
 
         btnVolverAlumnoNota.setText("Volver");
+        btnVolverAlumnoNota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverAlumnoNotaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,6 +75,10 @@ public class AlumnoNota extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVolverAlumnoNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverAlumnoNotaActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVolverAlumnoNotaActionPerformed
 
     /**
      * @param args the command line arguments

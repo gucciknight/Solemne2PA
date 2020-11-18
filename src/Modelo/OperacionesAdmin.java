@@ -48,7 +48,7 @@ public class OperacionesAdmin extends Conexion {
         try{
             ps = con.prepareStatement(sql);
             rsi = ps.executeUpdate(sql);
-            System.out.println(alu.idAlumno);
+            System.out.println(alu.idNivelAlumno);
             System.out.println("Data from online Database :");
             return true;
             
@@ -65,16 +65,12 @@ public class OperacionesAdmin extends Conexion {
         }
     }
     
-    public boolean modificarAlumno (Alumno alu) {
+    public boolean modificarAlumno(Alumno alu) {
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "UPDATE alumno SET nombre = ?, apellidos = ? WHERE id = ?";
+        String sql = "UPDATE alumno SET nivel_id = ('"+alu.getIdNivelAlumno()+"'), login=('"+alu.getLoginAlumno()+"'), clave=('"+alu.getClaveAlumno()+"'), nombre=('"+alu.getNombreAlumno()+"'), apellidos=('"+alu.getApellidoAlumno()+"') WHERE id = ('"+alu.getIdAlumno()+"')";
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, alu.getIdAlumno());
-            /*ps.setInt(2, alu.getIdNivelAlumno());*/
-            ps.setString(2, alu.getNombreAlumno());
-            ps.setString(3, alu.getApellidoAlumno());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -117,7 +113,7 @@ public class OperacionesAdmin extends Conexion {
         try{
             ps = con.prepareStatement(sql);
             rsi = ps.executeUpdate(sql);
-            System.out.println(prof.idProfesor);
+            System.out.println(prof.loginProfesor);
             System.out.println("Data from online Database :");
             return true;
             
@@ -137,14 +133,9 @@ public class OperacionesAdmin extends Conexion {
     public boolean modificarProfesor(Profesor prof) {
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "UPDATE profesor SET idProfesor=?, nombreProfesor=?, apellidoProfesor=?, emailProfesor=?, especialistaProfesor=? WHERE codigo = ?)";
+        String sql = "UPDATE profesor SET login=('"+prof.getLoginProfesor()+"'), clave=('"+prof.getClaveProfesor()+"'), nombre=('"+prof.getNombreProfesor()+"'), apellidos=('"+prof.getApellidoProfesor()+"'), email=('"+prof.getEmailProfesor()+"'), especialista=('"+prof.getEspecialistaProfesor()+"') WHERE id = ('"+prof.getIdProfesor()+"')";
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, prof.getIdProfesor());
-            ps.setString(2, prof.getNombreProfesor());
-            ps.setString(3, prof.getApellidoProfesor());
-            ps.setString(4, prof.getEmailProfesor());
-            ps.setInt(5, prof.getEspecialistaProfesor());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -162,7 +153,7 @@ public class OperacionesAdmin extends Conexion {
     public boolean eliminarProfesor(Profesor prof) {
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "DELETE FROM profesor WHERE idProfesor = ?)";
+        String sql = "DELETE FROM profesor WHERE id = ?";
         try {
             ps = con.prepareStatement(sql);
             ps.setInt(1, prof.getIdProfesor());
@@ -212,7 +203,7 @@ public class OperacionesAdmin extends Conexion {
             ps.setString(1, asign.getNombreAsignatura());
             ps.setInt(2, asign.getIdNivelAsignatura());
             ps.setInt(3, asign.getIdProfesor());
-            ps.setInt(4, asign.idAsignatura);
+            ps.setInt(4, asign.getIdAsignatura());
             ps.execute();
             return true;
         } catch (SQLException e) {

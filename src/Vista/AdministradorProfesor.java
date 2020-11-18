@@ -44,7 +44,9 @@ public class AdministradorProfesor extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         txtEmailAdminProfesor = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        passContrasenaAdminProfesor = new javax.swing.JPasswordField();
+        txtclaveAdminProfesor = new javax.swing.JPasswordField();
+        jLabel8 = new javax.swing.JLabel();
+        txtLoginAdminProfesor = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,7 +59,7 @@ public class AdministradorProfesor extends javax.swing.JFrame {
 
         jLabel4.setText("Asignatura:");
 
-        jLabel5.setText("Rut:");
+        jLabel5.setText("ID:");
 
         btnGuardarAdminProfesor.setText("Guardar");
 
@@ -66,10 +68,23 @@ public class AdministradorProfesor extends javax.swing.JFrame {
         btnEliminarAdminProfesor.setText("Eliminar");
 
         btnVolverAdminProfesor.setText("Volver");
+        btnVolverAdminProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverAdminProfesorActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Email:");
 
         jLabel7.setText("Contraseña:");
+
+        jLabel8.setText("Login:");
+
+        txtLoginAdminProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLoginAdminProfesorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -80,12 +95,16 @@ public class AdministradorProfesor extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)))
+                            .addComponent(jLabel7)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel6))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(jLabel8))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(btnGuardarAdminProfesor)))
@@ -106,8 +125,9 @@ public class AdministradorProfesor extends javax.swing.JFrame {
                             .addComponent(txtRutAdminProfesor)
                             .addComponent(txtAsignaturaAdminProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                             .addComponent(txtEmailAdminProfesor)
-                            .addComponent(passContrasenaAdminProfesor))))
-                .addContainerGap(49, Short.MAX_VALUE))
+                            .addComponent(txtclaveAdminProfesor)
+                            .addComponent(txtLoginAdminProfesor))))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,15 +150,19 @@ public class AdministradorProfesor extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(txtEmailAdminProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(passContrasenaAdminProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAsignaturaAdminProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                    .addComponent(jLabel8)
+                    .addComponent(txtLoginAdminProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtclaveAdminProfesor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAsignaturaAdminProfesor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarAdminProfesor)
                     .addComponent(btnModificarAdminProfesor)
@@ -160,6 +184,14 @@ public class AdministradorProfesor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVolverAdminProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverAdminProfesorActionPerformed
+           this.setVisible(false);
+    }//GEN-LAST:event_btnVolverAdminProfesorActionPerformed
+
+    private void txtLoginAdminProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginAdminProfesorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLoginAdminProfesorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,12 +240,14 @@ public class AdministradorProfesor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    public javax.swing.JPasswordField passContrasenaAdminProfesor;
     public javax.swing.JTextField txtApellidoAdminProfesor;
     public javax.swing.JTextField txtAsignaturaAdminProfesor;
     public javax.swing.JTextField txtEmailAdminProfesor;
+    public javax.swing.JTextField txtLoginAdminProfesor;
     public javax.swing.JTextField txtNombreAdminProfesor;
     public javax.swing.JTextField txtRutAdminProfesor;
+    public javax.swing.JPasswordField txtclaveAdminProfesor;
     // End of variables declaration//GEN-END:variables
 }
